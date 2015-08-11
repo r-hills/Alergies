@@ -1,0 +1,33 @@
+Handwritten Specs
+
+
+LOGIC
+1) Take user input string, insert into array, do sort so characters are in alphabetical order
+
+2) Take user possibility string(s), insert them into associative array, sort them into alphabetical order
+
+    array[0] = split($possibility_string);
+    sort(array[0]);
+
+Input = bread
+Key/Value
+bread => 1
+jim => 2
+beard => 3
+
+for each result
+  if key == 1
+    Display this is not an anagram of itself
+  if key == 2
+    Display "This is not an anagram"
+  if key == 3
+    Display "this is an anagram"
+
+
+TESTS
+
+1) Take 'bread' as string input, return 'abder'
+  - Data type on return: string
+
+2) Make sure that 'bread' is NOT an anagram of bread
+  -  Data type on return: true

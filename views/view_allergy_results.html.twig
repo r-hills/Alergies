@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <title> </title>
+    </head>
+    <body>
+        <div class='container'>
+            {% if results is not empty %}
+                {% for result in results %}
+                    {% if result == 1 %}
+                        <p> {{ possibilities[counter] }} is not an anagram of itself.</p>
+                    {% endif %}
+                    {% if result == 2 %}
+                        <p> {{ possibilities[counter] }} is not an anagram.</p>
+                    {% endif %}
+                    {% if result == 3 %}
+                        <p><strong>{{ possibilities[counter] }} is an anagram!</strong></p>
+                    {% endif %}
+                    {% set counter = counter + 1 %}
+                {% endfor %}
+            {% else %}
+                <p> No possibilities </p>
+            {% endif %}
+        </div>  <!-- End of container -->
+    </body>
+</html>
